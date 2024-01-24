@@ -47,7 +47,7 @@
 <img src="https://imgur.com/zWfCI8w.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 <p> Input Sha256 hash into VirusTotal for file reputation analysis</p>
 <img src="https://imgur.com/12yCIu7.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
-
+<p> Potential Malware name: Cerber Malware </p>
 <h3> TBD is progress</h3>
 
 
