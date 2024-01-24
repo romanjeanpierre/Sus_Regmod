@@ -42,6 +42,25 @@
 <p> Command => <code> index="botsv1" sourcetype="xmlwineventlog" osk.exe Image="C:\\Users\\bob.smith.WAYNECORPINC\\AppData \\Roaming\\{35ACA89F-933F-6A5D-2776-A3589FB99832}\\osk.exe" DestinationPort=6892 |  stats count by DestinationIp </code></p>
 <img src="https://imgur.com/m1nrNER.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 
+<h3> Retrieve SHA256 Hash for external analysis</h3>
+<p> Query Sysmon Event ID 7 with the image file. Command => <code> index="botsv1" sourcetype="xmlwineventlog" ImageLoaded=*osk.exe EventID=7 </code> </p>
+<img src="https://imgur.com/zWfCI8w.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+<p> Input Sha256 hash into VirusTotal for file reputation analysis</p>
+<img src="https://imgur.com/12yCIu7.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+
+<h3> TBD is progress</h3>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
