@@ -22,7 +22,7 @@
 <img src="https://imgur.com/a4qIZSo.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 
 <h3> Analyze Sysmon event of osk.exe and determine file path </h3>
-<p> Command => index="botsv1" sourcetype="xmlwineventlog" osk.exe </p>
+<p> Command => <code>index="botsv1" sourcetype="xmlwineventlog" osk.exe</code> </p>
 <img src="https://imgur.com/RbRY3yn.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 
 <h3>Identify Workstation </h3> 
@@ -33,4 +33,16 @@
 <p> SourceIp => 192.168.250.10 </p>
 <p> User => Bob.smith </p>
 
-<h3>Investigate network connections by analyzing destination ports and unique destination IP addresses connected to the file. </h3>
+<h3>Investigate network communications </h3>
+<p> Analyzing destination ports and unique destination IP addresses connected to the file.</p>
+<p> Scroll to Destination Port in Interesting Fields </p>
+<img src="https://imgur.com/j8sh8b2.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+<p> Destination port 6892 has the highest volume of traffic</p>
+<p> Adding destination port into the query and identifying the number of unique destination IP addresses the file is connecting to.</p>
+<p> Command => <code> index="botsv1" sourcetype="xmlwineventlog" osk.exe Image="C:\\Users\\bob.smith.WAYNECORPINC\\AppData \\Roaming\\{35ACA89F-933F-6A5D-2776-A3589FB99832}\\osk.exe" DestinationPort=6892 |  stats count by DestinationIp </code></p>
+<img src="https://imgur.com/m1nrNER.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+
+
+
+
+
