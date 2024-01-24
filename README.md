@@ -25,6 +25,12 @@
 <p> Command => index="botsv1" sourcetype="xmlwineventlog" osk.exe </p>
 <img src="https://imgur.com/RbRY3yn.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 
-<h3>  TBD </h3>
+<h3>Identify Workstation </h3> 
+<p> System details where the file is operational, including the computer name, IP address, and user account </p>
+<img src="https://imgur.com/vmM2F3C.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+<p> Directory => C:\Users\bob.smith.WAYNECORPINC\AppData\Roaming\{35ACA89F-933F-6A5D-2776-A3589FB99832}\osk.exe </p>
+<p> Computer => we8105desk.waynecorpinc.local </p>
+<p> SourceIp => 192.168.250.10 </p>
+<p> User => Bob.smith </p>
 
-
+<h3>Investigate network connections by analyzing destination ports and unique destination IP addresses connected to the file. </h3>
