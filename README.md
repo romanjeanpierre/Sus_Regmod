@@ -37,7 +37,7 @@
 <p> Analyzing destination ports and unique destination IP addresses connected to the file.</p>
 <p> Scroll to Destination Port in Interesting Fields </p>
 <img src="https://imgur.com/j8sh8b2.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
-<p> Destination port 6892 has the highest volume of traffic</p>
+<p> Destination port 6892 has the highest volume of traffic, we will come back to the single connection on port 80 </p> 
 <p> Adding destination port into the query and identifying the number of unique destination IP addresses the file is connecting to.</p>
 <p> Command => <code> index="botsv1" sourcetype="xmlwineventlog" osk.exe Image="C:\\Users\\bob.smith.WAYNECORPINC\\AppData \\Roaming\\{35ACA89F-933F-6A5D-2776-A3589FB99832}\\osk.exe" DestinationPort=6892 |  stats count by DestinationIp </code></p>
 <img src="https://imgur.com/m1nrNER.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
@@ -51,17 +51,23 @@
 
 <h3>Use FortiGate Unified Threat Management logs for complementary analysis </h3>
 <p> Retrieve application category, action, critical level, etc using command => <code>index="botsv1" sourcetype="fortigate_utm" dest_port=6892</code> </p>
-<img src="https://imgur.com/12yCIu7.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+<img src="https://imgur.com/rqjvoC3.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+
+<h3> Conduct OSINT on Malware</h3>
+<img src="https://imgur.com/nwwCBJY.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+<p> Cerber Ransomware </p>
+
+<h3> Investigate the Single connection on Destination port=80</h3>
+<p> Identify alert signatures in Suricata logs as they have different event types.</p>
+<p> Command => <code> index="botsv1" sourcetype="suricata" src_ip=192.168.250.100 dest_ip=54.148.194.58 dest_port=80 </code> </p>
+
+<img src="https://imgur.com/OgyrXIZ.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+<img src="https://imgur.com/tWFmj8N.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+<img src="https://imgur.com/XT5gEaS.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 
 
-
-
-
-
-
-
-
-
+<h2> Conclusion </h2>
+<p> The investigation through Splunk Analysis enabled a detailed understanding of a potentially malicious file found in an employee's computer registry. By combining log analysis in Splunk with OSINT methods, the project successfully determined the nature of the file, its activities, and potential security implications; highlighting the importance of thorough threat management in identifying and mitigating cybersecurity threats. </p>
 
 
 
