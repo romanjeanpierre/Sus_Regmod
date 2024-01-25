@@ -48,7 +48,11 @@
 <p> Input Sha256 hash into VirusTotal for file reputation analysis</p>
 <img src="https://imgur.com/12yCIu7.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 <p> Potential Malware name: Cerber Malware </p>
-<h3> TBD is progress</h3>
+
+<h3>Use FortiGate Unified Threat Management logs for complementary analysis </h3>
+<p> Retrieve application category, action, critical level, etc using command => <code>index="botsv1" sourcetype="fortigate_utm" dest_port=6892</code> </p>
+<img src="https://imgur.com/12yCIu7.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
+
 
 
 
